@@ -4,25 +4,28 @@
 
 package com.example.labo2.app;
 
-/**
- * Created by 199364921 on 2014-06-13.
- */
+import android.database.sqlite.SQLiteDatabase;
+
 public class Contact {
-    private int _id;
+    private long _id;
     private String nom;
     private String numTelephone;
 
-    public Contact(int _id, String nom, String numTelephone) {
-        this._id = _id;
+    public Contact(){
+
+    };
+
+    public Contact(long id, String nom, String numTelephone) {
+        this._id = id;
         this.nom = nom;
         this.numTelephone = numTelephone;
     }
 
-    public int get_id() {
+    public long getId() {
         return _id;
     }
 
-    private void set_id(int _id) {
+    public void setId(long _id) {
         this._id = _id;
     }
 
